@@ -7,4 +7,5 @@ make sure no BOM is present in csv files! this causes errors.
 pls no edit this readme file
 
 currently the following seasons are included in playerwins.csv:
+1
 2
