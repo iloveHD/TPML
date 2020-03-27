@@ -7,11 +7,11 @@ lines = f.readlines()
 f.close()
 for line in lines[9:]:
   szns.append(int(line))
-szns.sort()
 if int(sys.argv[1]) in szns:
   print('this season is already included dumb dumb\n')
   sys.exit()
-szns.append(sys.argv[1])
+szns.append(int(sys.argv[1]))
+szns.sort()
 try:
   with open('playerwins.csv', newline='') as csvfile:
     readmedaddy = csv.reader(csvfile, delimiter=',')
