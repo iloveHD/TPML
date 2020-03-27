@@ -5,7 +5,7 @@ szns = []
 f = open('readme.txt','r')
 lines = f.readlines()
 f.close()
-for line in lines[8:]:
+for line in lines[9:]:
   szns.append(int(line))
 szns.sort()
 if int(sys.argv[1]) in szns:
@@ -58,7 +58,7 @@ for player in players:
   f.write('{},{},{},{:.3f}\n'.format(player,wins,losses,wins/(wins+losses)))
 f.close()
 f = open('readme.txt','w')
-f.write('requires python 3.  from command line run:\n\t py yeet.py n\nwhere n is the season number\ndirectory should include files scores<n>.csv and teams<n>.csv\nfiles from seasons 1 and 2 are given as examples of formatting.\npls no edit this readme file\n\ncurrently the following seasons are included in playerwins.csv:\n')
+f.write('requires python 3.  from command line run:\n\t py yeet.py n\nwhere n is the season number\ndirectory should include files scores<n>.csv and teams<n>.csv\nfiles from seasons 1 and 2 are given as examples of formatting.\nmake sure no BOM is present in csv files! this causes errors.\npls no edit this readme file\n\ncurrently the following seasons are included in playerwins.csv:\n')
 for szn in szns:
   f.write(str(szn)+'\n')
 f.close()
